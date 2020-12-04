@@ -1,0 +1,81 @@
+﻿<Window x:Class="Heladeria.vndModificarHelado"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Heladeria"
+        mc:Ignorable="d"
+        Title="vndModificarHelado" Height="500" Width="600" Background="Transparent" WindowStyle="None" AllowsTransparency="True">
+    <Border BorderThickness="0" CornerRadius="60"  Background="#b0e7ea">
+
+        <DockPanel  Margin="20,15,20,20" Background="#b0e7ea" >
+            <Border BorderThickness="0,0,0,0" DockPanel.Dock="Top" BorderBrush="#ffe9df" CornerRadius="40,40,0,0">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFB9795" Offset="0"/>
+                        <GradientStop Color="#FFCB3C49" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+
+                <DockPanel>
+                    <Image DockPanel.Dock="Left" Source="logol.png"  Width="100" Margin="5"></Image>
+                    <TextBlock  FontSize="35" TextAlignment="Center" FontFamily="Script MT" Padding="30" Foreground="White" Margin="0,0,20,0">Editar</TextBlock>
+
+                </DockPanel>
+            </Border>
+            <UniformGrid Columns="2"  DockPanel.Dock="Bottom"   >
+                <Button HorizontalAlignment="Right" Name="btnAceptar" Click="btnAceptar_Click" ToolTip="Agregar">
+                    <Image Source="btnAceptar.png"></Image>
+                </Button>
+                <Button HorizontalAlignment="Left" Name="btnCancelar" Click="btnCancelar_Click" ToolTip="Cancelar">
+                    <Image Source="btnCancel.png"></Image>
+                </Button>
+                <UniformGrid.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent"></Setter>
+                        <Setter Property="BorderThickness" Value="0
+                            "></Setter>
+                        <Setter Property="BorderBrush" Value="Transparent"></Setter>
+                        <Setter Property="Width" Value="60"></Setter>
+                        <Setter Property="Height" Value="70"></Setter>
+                    </Style>
+                </UniformGrid.Resources>
+            </UniformGrid>
+
+            <DockPanel>
+                <Image   Margin="10" Name="imgProducto" Stretch="Uniform" Width="200" Height="200" Source="{Binding Image}"></Image>
+                <StackPanel Margin="20,10" DockPanel.Dock="Right">
+                    <TextBlock>Código</TextBlock>
+                    <TextBox IsEnabled="False" Name="txtCodigo" Text="{Binding Codigo}"></TextBox>
+                    <TextBlock>Nombre</TextBlock>
+                    <TextBox Name="txtNombre" Text="{Binding Nombre}"></TextBox>
+                    <TextBlock>Marca</TextBlock>
+                    <TextBox Name="txtMarca" Text="{Binding Marca}"></TextBox>
+                    <TextBlock>Precio</TextBlock>
+                    <TextBox Name="txtPrecio" Text="{Binding Precio}"  ></TextBox>
+                    <DockPanel>
+
+                        <StackPanel>
+                            <TextBlock >Imagen:</TextBlock>
+                            <DockPanel  Height="25">
+                                <Button DockPanel.Dock="Right" Padding="2" Name="btnAgregaImagen" Click="btnAgregaImagen_Click" Background="#4e9ac6">Examinar</Button>
+                                <TextBox Name="txtRuta"></TextBox>
+                            </DockPanel>
+                        </StackPanel>
+                    </DockPanel>
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"></Setter>
+                            <Setter Property="Margin" Value="0,5,0,2"></Setter>
+                            <Setter Property="FontFamily" Value="Arial"></Setter>
+                            <Setter Property="Foreground" Value="#4e9ac6"></Setter>
+                            <Setter Property="FontWeight" Value="ExtraLight"></Setter>
+                        </Style>
+                    </StackPanel.Resources>
+                </StackPanel>
+            </DockPanel>
+        </DockPanel>
+    </Border>
+
+</Window>

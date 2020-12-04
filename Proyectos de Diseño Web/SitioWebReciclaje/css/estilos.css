@@ -1,0 +1,673 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*PAGINA PRINCIPAL*/
+body {
+    font-family: 'open sans';
+}
+/*COLOR AZULITO BONITO  hsl(184, 45%, 52% )
+  COLOR VERDE PRINCIPAL C/ TRANSPARENCIA hsla(80, 61%, 50%, 0.70);
+
+
+*/
+.contenedor, .contenedor-nivel {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.titulo , .nos-descripcion h1{
+    color: hsl(194, 75%, 32%);
+    /*color: #195F50;*/
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Header */
+
+.pag-principal {
+    width: 100%;
+    height: 700px;
+    background: #bc4e9c;
+    /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, hsla(70, 95%, 50%, 0.459), hsla(184, 45%, 52%, 0.664)), url(../img/portada.jpg);*/
+    background: -webkit-linear-gradient(to right, hsla(80, 80%, 45%, 0.259), hsla(184, 45%, 52%, 0.684)), url(../img/portada.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, hsla(70, 95%, 50%, 0.459), hsla(184, 45%, 52%, 0.664)), url(../img/portada.jpg);*/
+    background: linear-gradient(to right, hsla(80, 80%, 45%, 0.259), hsla(184, 45%, 52%, 0.684)), url(../img/portada.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header nav {
+    /*    text-align: right;*/
+    height: 80px;
+    /* background-color: hsla(80, 90%, 50%, 0.350);*/
+    background-color: hsla(80, 61%, 50%, 0.70);
+}
+
+
+    nav > a {
+        margin: auto;
+        display: block;
+        float: left;
+        width: 10%;
+        height: 80px;
+        text-align: center;
+        align-content: center;
+        color: #ffff;
+        font-weight: 500;
+        text-decoration: none;
+        line-height: 80px;
+    }
+.icono-iniciarsesion {
+    color:darkgreen;
+    /*background-color:red;*/
+    position:absolute;
+    right:0;
+}
+
+
+nav a img {
+    height: 80px;
+    /* display: none;*/
+    margin: 0;
+}
+
+nav > a:hover {
+    background: hsla(184, 45%, 52%, 0.5 );
+    /*background-color: white;*/
+    font-weight: bold;
+}
+
+.fa-user{
+    
+    font-size:x-large;
+    /*background-color:red;*/
+}
+
+header .textos-header {
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* nuestro proyecto*/
+
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-about-us{
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/*Bienvenida*/
+
+
+.portafolio, .nivel {
+    background: #f2f2f2;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+
+.galeria-port, .galeria-port-nivel{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+   
+    
+}
+
+.imagen-port, .imagen-port-nivel {
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    
+}
+
+    .imagen-port-nivel{
+      
+        width:18vw;
+    }
+
+    .imagen-port > img, .imagen-port-nivel > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+      
+
+        .hover-galeria, .hover-galeria-nivel {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            transform: scale(0);
+            background: hsla(184, 45%, 52%, 0.8 );
+            /*background: hsla(180,91%,27%, 0.7);*/ /*fondo bienvenida*/
+            transition: transform .5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+           
+
+            .hover-galeria img, .hover-galeria-nivel img {
+                width: 50px;
+            }
+            .hover-galeria-nivel img {
+                width: 40px;
+                margin:50px 0 10px 0;
+               
+            }
+
+    .hover-galeria p, .hover-galeria-nivel p {
+        color: #fff;
+    }
+        
+        .imagen-port:hover .hover-galeria, .imagen-port-nivel:hover .hover-galeria-nivel {
+            transform: scale(1);
+        }
+
+/*TERMINA PRINCIPAL*/
+
+
+/* FOOTER */
+footer {
+    /*    background: hsla(450, 95%, 50%, 0.309);*/
+    background-color: hsla(80, 61%, 50%, 0.50);
+    height: 100px;
+    /*  padding:10px;*/
+    /* padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;*/
+}
+
+    footer .redes-sociales {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+       /* background-color: red;*/
+        display: flex;
+        flex-direction:row-reverse;
+    }
+        footer .redes-sociales a {
+            margin-right:10px;
+            /*width:20%;*/
+            text-decoration:none;
+            flex-flow:wrap;
+            flex-direction:column-reverse;
+            /*background-color: teal;*/
+            color:darkblue;
+            display: block;
+            float: left;
+           
+        }
+        footer .redes-sociales label{
+            color:darkblue;
+            font-weight:400;
+            
+        }
+    footer div h3 {
+        line-height: 50px;
+        font-weight: 100;
+        font-size: small;
+        text-align: center;
+    }
+    /*TERMINA FOOTER*/
+
+
+
+    /*QUIENES SOMOS*/
+.otras-paginas {
+    width: 100%;
+    height: 450px;
+    background: #bc4e9c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(70, 95%, 50%, 0.459), hsla(184, 45%, 52%, 0.664)), url(../img/portada.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, hsla(70, 95%, 50%, 0.459), hsla(184, 45%, 52%, 0.664)), url(../img/portada.jpg);*/
+    background: linear-gradient(to right, hsla(80, 80%, 45%, 0.259), hsla(184, 45%, 52%, 0.684)), url(../img/portada.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+}
+.pag-evaluacion {
+    background: linear-gradient(to right, hsla(80, 80%, 45%, 0.259), hsla(184, 45%, 52%, 0.684)), url(../img/PortadaEvaluacion.jpg);
+    background-size: 100%;
+}
+.pag-capacitacion {
+    background: linear-gradient(to right, hsla(80, 80%, 45%, 0.259), hsla(184, 45%, 52%, 0.684)), url(../img/PortadaCapacitacion.jpg);
+    background-size: 100%;
+    
+}
+.pag-recompensas {
+    background: linear-gradient(to right, hsla(80, 80%, 45%, 0.259), hsla(184, 45%, 52%, 0.684)), url(../img/PortadaRecompensas.jpg);
+    background-size: 100%;
+}
+.pag-quienes {
+    background: linear-gradient(to right, hsla(80, 80%, 45%, 0.259), hsla(184, 45%, 52%, 0.684)), url(../img/PortadaNosotros.jpg);
+    background-size: 100%;
+}
+
+header .textos-otras {
+    display: flex;
+    height: 250px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-otras h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+.textos-otras h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+.nosotros {
+    font-size:large;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: auto;
+    
+}
+
+    .nosotros .nos-descripcion2, .nosotros .nos-imagenes {
+       
+        width: 70vw;
+        height: 50vh;
+        margin:50px 0px 50px 0px;
+        /*margin: auto;*/
+        display: flex;
+        flex-direction: row;
+    }
+
+        .nosotros .nos-descripcion2 .mvv {
+            width: 35vw;
+            border: 1px solid lightgray;
+            margin: 5px;
+           
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, .3);
+        }
+
+.mvv h2 {
+    margin: 0;
+    color: white;
+    font-weight: 300;
+    /*  background-color: #38B7AB;*/
+    background-color: hsl(184, 45%, 52% );
+    padding: 10px;
+}
+
+.mvv p {
+    text-align: justify;
+    padding: 0px 10px;
+}
+
+.nosotros .nos-descripcion p {
+    margin: 0;
+    margin-bottom:50px;
+    text-align: justify;
+    
+}
+/*TERMINA NOSOTROS*/
+
+
+
+/*RECOMPENSAS*/
+.recompensa {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: auto;
+  /*  background-color:rebeccapurple;*/
+}
+.recompensa div p{
+  /*  background-color:green;*/
+    text-align:justify;
+    margin-bottom:100px;
+}
+.recompensa div label{
+    font-size:xx-large;
+    
+   /* background-color:aqua;*/
+    display:block;
+    text-align:center;
+    margin-bottom:30px;
+}
+.nivel {
+    margin-bottom: 100px;
+}
+
+    /*TERMINA RECOMPENSA*/
+
+
+
+    /*EVALUACION*/
+.evaluacion {
+   /* background-color: red;*/
+    width: 70vw;
+    margin: auto;
+    padding: 10px;
+}
+    .evaluacion h1{
+        text-align:center;
+        margin-bottom:50px;
+    }
+    .evaluacion p, .resultado p{
+        font-size: larger;
+        margin-bottom: 50px;
+        text-align:justify;
+    }
+    .evaluacion .cuestionario {
+        /* background-color:aqua;*/
+        background: #f2f2f2;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, .4);
+        width: 60vw;
+        margin: auto;
+    }
+ .contenedor-pregunta{
+   /*  background-color:mediumpurple;*/    
+     margin:10px 10px 25px 10px;
+
+ }
+ 
+ 
+ .contenedor-pregunta .pregunta{
+     /*background-color:yellow;*/
+     display:block;
+     padding:5px;
+ }
+
+.respuestas {
+    /*background-color: hotpink;*/
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    
+}
+ .respuestas .opcion{
+     margin:auto;
+   /*  align-content:flex-end;*/
+ }
+ 
+ .boton{
+     margin:auto;
+    background-color:darkgreen;
+    color:white;
+     height:50px;
+     width:10vw;
+     font-size:larger;
+     display:block;
+    flex-direction:row-reverse;
+    margin-top:50px;
+  margin-bottom:50px;
+     
+ }
+
+ .resultado{
+    /* background-color:lawngreen;*/
+     padding:20px 0px 20px 0px;
+ }
+ .resultado h2{
+     margin:0;
+ }
+
+ /*TERMINA EVALUACION*/
+
+
+ /*CAPACITACION*/
+ .capacitacion{
+     /*background-color:purple;*/
+     width:70vw;
+     margin:auto;
+ }
+ .capacitacion .panel-nivel{
+     
+     height:100px;
+     padding:10px;
+     display:flex;
+    
+ }
+.panel-nivel input, .nivel-boton {
+  /*  background-color: yellow;*/
+    background-color: hsl(184, 45%, 52% );
+    width: 17vw;
+    height: 80px;
+    flex-wrap: wrap;
+    margin: auto;
+    line-height:80px;
+    text-align:center;
+    /*box-shadow: 0 0 2px 0 rgba(0, 0, 0, .4);*/
+    color: white;
+    font-size: larger;
+    font-weight: 600;
+}
+    .panel-nivel input:hover, .nivel-boton:hover {
+        background-color: hsla(80, 71%, 50%, 0.40);
+    }
+.nivel-video {
+    padding: 0px 0 10px 0;
+    /* background-color:beige;*/
+    margin: 30px 10px 20px 10px;
+    background: #f2f2f2;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .4);
+}
+.nivel-video .video{
+ /*   background-color:gray;*/
+   
+}
+
+.video h2{
+    padding:15px;
+   
+
+}
+.video video {
+    display:block;
+   /* margin:20px 5vh 20px 5vh;*/
+   margin:auto;
+   margin-bottom:25px;
+   margin-top:10px;
+    width: 60vw;
+    height: 60vh;
+    align-content:center;
+    /*background-color: red;*/
+}
+
+.toma-evaluacion{
+    margin:10px 0 50px 0;
+  /*  background-color:red;*/
+}
+.toma-evaluacion label{
+    font-size:larger;
+    display:block;
+    text-align:center;
+   /* background-color:yellow;*/
+
+}
+.toma-evaluacion input{
+    /*background-color:aqua;*/
+    width:200px;
+    margin:auto;
+    margin-top:10px;
+}
+
+
+/*TERMINA CAPACITACION*/
+
+
+
+
+
+/*INICIAR SESION*/
+
+.inicio-sesion {
+    /* background-color: red;*/
+    background: linear-gradient(to right, hsla(80, 80%, 45%, 0.259), hsla(184, 45%, 52%, 0.684)), url(../img/inicio-sesion.jpg);
+    background-size: 100% 100%;
+    height: 100vh;
+    /*height: Calc(100vh - 100px);*/
+    padding: 50px;
+}
+
+    .inicio-sesion div, .registrar .datos{
+        background-color: hsla(80, 61%, 50%, 0.90);
+        width: 50vw;
+        margin: auto;
+        align-content: center;
+        padding: 25px;
+    }
+  
+    .inicio-sesion .logo img {
+        height: 150px;
+        display:block;
+        align-content: center;
+        margin:auto;
+    }
+    .datos, .inicio-sesion .ir-registar {
+        display: block;
+        /* flex-direction:column;*/
+       
+        text-align: center;
+        margin: auto;
+        /*background-color: aqua;*/
+    }
+    .inicio-sesion h2, .registar h2{
+        margin-bottom:20px;
+        
+        /*font-weight:initial;*/
+       /* background-color:palevioletred;*/
+    }
+    .datos input, .registrar input{
+        height:45px;
+        width:25vw;
+      /*  background-color:yellow;*/
+        padding:10px;
+        font-size:medium;
+    }
+    .datos .boton, .registrar .boton{
+        width:150px;
+        margin:auto;
+        margin-top:15px;
+        /*margin-bottom:50px;*/
+        background-color:darkgreen;
+        color:white;
+        font-weight:700;
+    }
+.inicio-sesion .ir-registar h4 {
+    color: white;
+    margin: 0;
+}
+
+.inicio-sesion .ir-registar a {
+    font-size: small;
+    color:white;
+}
+    /*TERMINA INICIAR SESION*/
+
+
+
+    /*REGISTAR*/
+.registrar {
+    /*height: Calc(100vh - 100px);*/
+    background: linear-gradient(to right, hsla(80, 80%, 45%, 0.259), hsla(184, 45%, 52%, 0.684)), url(../img/inicio-sesion.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 50px 0 50px 0px;
+    /* margin-bottom: 50px;
+    margin-top:50px;*/
+}
+    .registrar .datos{
+        width:65vw;
+    }
+    .registrar h2 {
+        color: white;
+        margin-bottom: 20px;
+    }
+.registrar .datos {
+    color:dimgray;
+    height: Calc(100vh-105px);
+    /* background-color:yellow;*/
+}
+.registrar .datos input{
+    margin-bottom:7px;
+}
+
+

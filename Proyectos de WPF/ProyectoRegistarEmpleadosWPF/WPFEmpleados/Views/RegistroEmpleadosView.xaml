@@ -1,0 +1,100 @@
+﻿<Window x:Class="WPFEmpleados.Views.RegistroEmpleadosView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFEmpleados.Views"
+        mc:Ignorable="d"
+        Title="RegistroEmpleadosView" Height="600" Width="500" WindowStyle="None">
+    <Window.Resources>
+
+       
+    </Window.Resources>
+    <DockPanel   Background="#6CACE4">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top"  Background="#0072CE" Margin="0,0,0,5" >
+            <TextBlock FontSize="22" Foreground="White" Padding="10"  Height="50" FontWeight="Bold" TextAlignment="Center" Margin="105,0,0,10" >Registrar Empleado</TextBlock>
+            <Image Source="/images/sencillo.png" Height="80" Width="70" ></Image>
+        </StackPanel>
+         <WrapPanel DockPanel.Dock="Bottom" HorizontalAlignment="Center" Margin="0,10">
+            <Border BorderThickness="5" BorderBrush="#0072CE" CornerRadius="15" Margin="5">
+                <Button HorizontalAlignment="Left" Background="#0072CE"  Padding="5,0" Foreground="White" BorderThickness="0" Command="{Binding GuardarCommand}" >Registrar Empleado</Button>
+            </Border>
+            <Border BorderThickness="5" BorderBrush="LightPink" CornerRadius="15" Margin="5">
+                <Button  Background="LightPink" BorderThickness="0" Command="{Binding CancelarCommand}">Cancelar</Button>
+            </Border>
+        </WrapPanel>
+        <StackPanel>
+            <StackPanel DataContext="{Binding Empleado}">
+                <StackPanel.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="BorderThickness" Value="5"></Setter>
+                        <Setter Property="BorderBrush" Value="White"></Setter>
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                        <Setter Property="Margin" Value="10,10,10,0"></Setter>
+                        <Setter Property="Background" Value="White"></Setter>
+                    </Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="Gray"></Setter>
+                        <!--<Setter Property="Background" Value="White"></Setter>-->
+                        <Setter Property="Padding" Value="3,0"></Setter>
+
+                    </Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Padding" Value="2"></Setter>
+                        <Setter Property="FontSize" Value="14"></Setter>
+                        <Setter Property="BorderThickness" Value="0"></Setter>
+                        <!--<Setter Property="BorderThickness" Value="0"></Setter>-->
+                    </Style>
+                </StackPanel.Resources>
+                <UniformGrid Columns="2">
+                    <Border  >
+                        <StackPanel >
+                            <TextBlock  >Codigo</TextBlock>
+                            <TextBox Name="txtCodigo" Text="{Binding Codigo, ValidatesOnDataErrors=True}" ></TextBox >
+                        </StackPanel>
+                    </Border>
+                </UniformGrid>
+                <Border  >
+                    <StackPanel >
+                        <TextBlock  >Nombre</TextBlock>
+                        <TextBox Name="txtNombre" Text="{Binding Nombre, ValidatesOnDataErrors=True}"  ></TextBox >
+                    </StackPanel>
+                </Border>
+                <Border  >
+                    <StackPanel >
+                        <TextBlock  >Direccion</TextBlock>
+                        <TextBox Name="txtDireccion"  Text="{Binding Direccion, ValidatesOnDataErrors=True}"></TextBox >
+                    </StackPanel>
+                </Border>
+                <UniformGrid Columns="2">
+                    <Border  >
+                        <StackPanel >
+                            <TextBlock  >Celular</TextBlock>
+                            <TextBox Name="txtCelular" Text="{Binding Celular, ValidatesOnDataErrors=True}" ></TextBox >
+                        </StackPanel>
+                    </Border>
+                    <Border  >
+                        <StackPanel >
+                            <TextBlock  >Sueldo</TextBlock>
+                            <TextBox Name="txtSueldo" Text="{Binding Sueldo, ValidatesOnDataErrors=True}" ></TextBox >
+                        </StackPanel>
+                    </Border>
+                </UniformGrid>
+                <Border  >
+                    <StackPanel >
+                        <TextBlock >Seccion</TextBlock>
+                        <ComboBox Name="cmbSeccion" SelectedValue="{Binding IdSeccion, ValidatesOnDataErrors=True}" BorderBrush="White" Background="White" >
+
+                        </ComboBox>
+                    </StackPanel>
+                </Border>
+               
+            </StackPanel>
+            <TextBlock  Background="Transparent" Foreground="DarkRed" Text="{Binding Error}" Margin="20,10">
+            </TextBlock>
+        </StackPanel>
+      
+        
+    </DockPanel>
+ 
+</Window>

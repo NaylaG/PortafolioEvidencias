@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Mi Carrito</title>
+    <link type="text/css" rel="stylesheet" href="EstilosPasteleria.css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <nav class="menu">
+        <a href="index.html">
+            <img src="images/logoblanco.png" alt="logo Valeria's Bake Shop" />
+        </a>
+        <ol class="menu-normal">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Productos.html">Productos</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a href="Sucursal.html">Sucursales</a></li>
+            <li><a href="Galeria.html">Galeria</a></li>
+            <li><a href="Carrito.html"><i class="fa fa-shopping-cart"></i></a></li>
+        </ol>
+
+        <div class="menu-chico">
+            <label for="checkmenu"><i class="fa fa-bars"></i></label>
+            <a href="Carrito.html"><i class="fa fa-shopping-cart"></i></a>
+            <input type="checkbox" id="checkmenu" />
+            <div class="panel">
+                <ul>
+                    <li><a href="index.html"><i class="fa fa-home"></i>Inicio</a></li>
+                    <li><a href="Productos.html"><i class="fa fa-birthday-cake"></i>Productos</a></li>
+                    <li><a href="Nosotros.html"><i class="fa fa-heart"></i>Nosotros</a></li>
+                    <li><a href="Contacto.html"><i class="fa fa-envelope"></i>Contacto</a></li>
+                    <li><a href="Sucursal.html"><i class="fa fa-map-marker"></i>Sucursales</a></li>
+                    <li><a href="Galeria.html"> <i class="fa fa-image"></i>Galeria</a></li>
+                    <li><a href="Carrito.html"><i class="fa fa-shopping-cart"></i>Carrito</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <main>
+        <div class="header">
+            <h1>Mi carrito</h1>
+        </div>
+        <div class="carrito">
+            <div class="producto">
+
+                <img src="images/black.jpg" alt="Patel blue gold" />
+
+                <div>
+                    <div>
+                        <h2>Pastel tres leches</h2>
+                        <p>
+                            Pastel de vainilla salseado en 3 leches y doble relleno con decoraciones doradas.
+                        </p>
+                        <a href="#">Eliminar</a>
+                    </div>
+                    <div class="cantidad">
+                        <h2>$450</h2>
+                        <select id="numPasteles">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="total">
+                <div>
+                    <table>
+                        <tr>
+                            <td>Precio</td>
+                            <td>$450.00</td>
+                        </tr>
+                        <tr>
+                            <td>IVA 16%</td>
+                            <td>$72.00</td>
+                        </tr>
+                        <tr>
+                            <td id="precioTotal">total</td>
+                            <td id="precio">$522.00</td>
+                        </tr>
+                    </table>
+                    <button>
+                        Comprar
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div>
+
+            <h5>
+                <i class="fa fa-heart"></i><br />Valeria's Bake Shop <br />
+                Desarrollado por Nayla Garcia
+            </h5>
+            <div>
+                <a href="https://www.facebook.com/Valerias-Bake-Shop-242545606485576/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/valerias.bs/?hl=es-la"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>

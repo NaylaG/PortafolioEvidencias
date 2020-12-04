@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Fanclub.MainPage" BackgroundColor="DarkSalmon">
+    <!--#EEB729-->
+    <StackLayout>
+        <Image  
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" Source="lgoarmy.png" WidthRequest="70" />
+        <Label Text="Elaborado por Nayla G" HorizontalOptions="Center" ></Label>
+    </StackLayout>
+
+</ContentPage>

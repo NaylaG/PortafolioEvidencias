@@ -1,0 +1,25 @@
+﻿<Window x:Class="ProyectoPersonas.Views.AgregarPersonaView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoPersonas.Views"
+        mc:Ignorable="d"
+        Title="AgregarPersonaView" Height="480" Width="500" Loaded="Window_Loaded" Background="#FF01011F">
+    <DockPanel>
+        <Button Command="{Binding Agregar}" Padding="10" DockPanel.Dock="Bottom" Height="50" Background="#FFF0AE21">
+            <Image Source="/Images/save.png" ></Image>
+        </Button>
+        <StackPanel Margin="20" >
+            <TextBlock FontSize="25" Margin="10" Foreground="White" FontFamily="Arial" FontWeight="SemiBold">AGREGAR EMPLEADO</TextBlock>
+            <TextBlock FontSize="20" Margin="10" Foreground="White">Nombre completo:</TextBlock>
+            <TextBox Text="{Binding Nombre}" FontSize="20" x:Name="TxtNombre" Margin="10"  ></TextBox>
+            <TextBlock FontSize="20" Margin="10" Foreground="White">Edad:</TextBlock>
+            <TextBox Text="{Binding Edad}" FontSize="20" x:Name="TxtEdad" Margin="10"></TextBox>
+            <TextBlock FontSize="20" Margin="10" Foreground="White">Género</TextBlock>
+            <ComboBox  SelectedValue="{Binding Genero}"  FontSize="20" Name="CmbGenero" Margin="10">
+            </ComboBox>
+            <TextBlock Text="{Binding Error}" Foreground="Red"></TextBlock>
+        </StackPanel>
+    </DockPanel>
+</Window>

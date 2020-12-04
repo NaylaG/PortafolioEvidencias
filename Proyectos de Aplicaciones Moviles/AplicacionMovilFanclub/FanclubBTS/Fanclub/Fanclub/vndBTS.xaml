@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fanclub.vndBTS" BackgroundColor="#3052A3" Title="BTS">
+    <ContentPage.ToolbarItems>
+        
+        <ToolbarItem  IconImageSource="login.png">
+
+        </ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        
+            <StackLayout>
+                <!--<Image Source="login.png" HeightRequest="70" Margin="10,20,10,10"></Image>-->
+            <!--<Label Text="BTS" FontSize="50" HorizontalOptions="CenterAndExpand" TextColor="White" FontFamily="Arial" Margin="2"></Label>-->
+                <Image Source="BTS.jpg" Margin="10,10,10,10" BackgroundColor="White"></Image>
+            <StackLayout BackgroundColor="#E6C2C2" Margin="10" Padding="10" VerticalOptions="FillAndExpand">
+                <Label FontFamily="Arial"   FontSize="Medium" Margin="5" Text="BTS es una boy band surcoreana formada por Big Hit Entertainment en 2013. Está compuesta por siete integrantes: Jin, Suga, J-Hope, RM, Jimin, V y Jungkook. "
+                TextColor="#02052B" HorizontalOptions="Fill" HorizontalTextAlignment="Center" />
+                <Label FontFamily="Arial"  FontSize="Medium" Margin="5" Text="El grupo debutó el 13 de junio de 2013 con la canción «No More Dream», incluida en su primer sencillo 2 Cool 4 Skool, mientras que su estreno en Japón se produjo el 4 de junio de 2014 con la versión en japonés del mismo tema. El nombre de su club de fanes oficial es A.R.M.Y, acrónimo de «Adorable Representative MC for Youth»."
+                TextColor="#02052B" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+            </StackLayout>
+            <Label Text="All rights reserved © 2019" HorizontalOptions="Center" VerticalOptions="EndAndExpand"></Label>
+        </StackLayout>
+        
+    </ScrollView>
+    
+</ContentPage>

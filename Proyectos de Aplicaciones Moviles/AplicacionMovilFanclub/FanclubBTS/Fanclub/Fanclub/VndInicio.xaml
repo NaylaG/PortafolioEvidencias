@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fanclub.VndInicio" BackgroundColor="#3052A3">
+    
+        <StackLayout>
+
+
+        <Image Source="perfil.png" HorizontalOptions="CenterAndExpand" HeightRequest="90"  Margin="10,35,10,10"></Image>
+            <!--<Button x:Name="btnRegistrar" Text="Registrar" BackgroundColor="#EEB729" VerticalOptions="CenterAndExpand" Margin="10"></Button>-->
+        <Label Text="Bienvenido" FontSize="Large" TextColor="White" HorizontalOptions="Center" FontFamily="Arial" Margin="0,0,0,20"></Label>
+        <Label TextColor="White" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Suscribete a el fancafe oficial de BTS y recibe toda las noticias de bangtan en un solo lugar."></Label>
+        <Button x:Name="btnEntrar" Text="Iniciar" BackgroundColor="#E6C2C2" VerticalOptions="Center" 
+                Margin="10" Clicked="BtnEntrar_Clicked"></Button>
+        <Button x:Name="btnBTS" Text="¿Quién es BTS?" BackgroundColor="#E6C2C2" VerticalOptions="Center" 
+                Margin="10" Clicked="BtnBTS_Clicked"></Button>
+        <Label Text="All rights reserved © 2019" HorizontalOptions="Center" VerticalOptions="EndAndExpand"></Label>
+        </StackLayout>
+    
+</ContentPage>

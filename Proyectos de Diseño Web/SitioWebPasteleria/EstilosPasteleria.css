@@ -1,0 +1,1121 @@
+﻿@font-face {
+    font-family: Asenine;
+    src: url(ASENINE_.ttf);
+}
+html{
+    width:100%;
+    height:100%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+main{
+    width:100%;
+    height:100%;
+}
+
+
+/*FOOTER*/
+footer {
+    background-color: #fc3468; /*principal*/
+    width: 100%;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end;
+}
+footer div{
+    width:100%;
+    height:80px;
+    margin:auto;
+   
+    
+}
+footer div h5 {
+        margin: 0;
+        padding: 10px 0 0 0;
+        color: white;
+        text-align: center;
+        font-weight:lighter;
+
+    }
+    footer div div {
+        width: 100%;
+        height: 20px;
+    }
+footer div div a{
+   
+    color:white;
+    margin:0px 10px ;
+    float:right;
+}
+/*TERMINA FOOTER*/
+
+
+/*GALERIA*/
+.header {
+    padding: 10px 60px;      
+    height: 70px;
+    border-bottom: 1.5px dotted gray;
+}
+    .header h1 {
+        color: black;
+        margin: 0;
+        font-family: Asenine;
+        letter-spacing: 2px;
+        font-weight: 300;
+        line-height: 50px;
+        text-transform: uppercase;
+        
+    }
+ 
+
+.row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+        width:90vw;
+        margin:auto;
+    }
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+.column img {
+        margin-top: 8px;
+        vertical-align: middle;
+    }
+/*TERMINA GALERIA*/
+
+/*MENU*/
+.menu {
+    background-color: #ff3377; /*principal*/
+    height: 100px;
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+
+    .menu > a > img {
+        height: 90px;
+        width: 135px;
+        margin: 5px 25px 5px 25px;
+    }
+
+.menu-chico {
+    display: none;
+}
+
+.menu-normal {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    float: right;
+}
+
+    .menu-normal ul {
+        display: none;
+    }
+
+    .menu-normal > li {
+        float: left;
+        width: 100px;
+        height: 100px;
+    }
+
+        .menu-normal > li:hover {
+            background-color: #FC6F8A;/*select*/
+        }
+
+    .menu-normal li a {
+        height: 100px;
+        display: block;
+        color: white;
+        font-size: medium;
+        text-decoration: none;
+        text-align: center;
+        line-height: 100px;
+        text-transform: uppercase;
+        font-family: 'Berlin Sans FB'
+    }
+
+/*TERMINA MENU*/
+
+
+
+
+/*PAGINA PRINCIPAL*/
+
+.inicio {
+    width: 100%;
+    height: calc(100vh - 100px);   
+    margin: auto;
+    display: flex;
+    position:relative;
+}
+    .inicio div img{
+        width: 100%;
+        height: 100%;
+    }
+     #logo-menu {
+    display: none;
+     }
+    .inicio div #logo {
+        width: 35vw;
+        height: 50vh;
+        position: absolute;
+        top: 30px;
+        left:10vw;
+    }
+
+    .inicio div h1 {
+        margin: 0;
+        position:absolute;
+        top:55vh;
+    }
+
+    .inicio .titulo {
+        font-family: Asenine;
+        letter-spacing: 3px;
+        font-size: 35px;
+        width: 60vw;
+        text-align: center;
+        
+        padding: 10px;
+    }
+
+.inicio div a {
+    margin: auto;
+    height: 50px;
+    width: 300px;
+    display: block;
+    background-color: #ff084a; /*Boton*/
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 70vh;
+    left: 15vw;
+}
+
+    .inicio div a:hover {
+        background-color: #FC6F8A; /*select*/
+    }
+
+.descripcion1 {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+    .descripcion1 .contigo, .descripcion1 .tradicion {
+        width: 90vw;
+        margin: auto;
+        align-content: center;
+        text-align: justify;
+        padding: 25px 0 0 0;
+        display: flex;
+    }
+        .descripcion1 .contigo h1, .descripcion1 .tradicion h1 {
+            text-align:left;
+        }
+
+   .descripcion1 .tradicion{
+    flex-direction:row-reverse;
+   }
+    .descripcion1 .frase {
+        width: 45vw;
+        padding:150px 15px;
+    }   
+    .nos-descripcion p {
+        padding: 10px;
+        line-height: inherit;
+        font-size: large;       
+    }
+        .descripcion1 .frase p b, .nos-descripcion p b {
+            color: #FC6F8A;
+            
+        }
+
+    .descripcion1 div img {      
+        width: 45vw;
+      height:100%;
+        min-width: 250px;
+    }
+.descripcion1 div video {
+    width: 45vw;
+    height: 100%;
+    min-width: 250px;
+}
+  /*TERMINA PAG PRINCIPAL*/
+
+ /*NOSOTROS*/
+        .nosotros {
+            display: flex;
+            flex-direction: column;
+            width: 90vw;
+            margin: auto;
+        }
+.nosotros .nos-descripcion2, .nosotros .nos-imagenes{
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction:row;
+}
+    .nosotros .nos-descripcion2 .mvv {
+        width: 30vw;
+        border: 1px solid lightgray;
+        margin: 5px;
+    }
+.mvv h2 {
+    margin: 0;
+    color: white;
+    font-weight: 300;
+    background-color: #FC6F8A;
+    /*background-color: #ff6289;*/
+    padding: 10px;
+}
+.mvv p {
+    text-align: justify;
+    padding: 0px 10px;
+}
+.nosotros .nos-imagenes img, .nosotros .nos-imagenes video {
+    padding: 5px;
+    width: 45vw;
+    height: 90vh;
+}
+
+.nosotros .nos-descripcion p{
+    margin:0;
+    text-align:justify;
+}
+.nosotros .nos-descripcion ul{
+    margin:0 0 10px 0;
+}
+.nosotros .nos-descripcion2 .mvv ul {
+    font-weight: lighter;
+}
+/*TERMINA NOSOTROS*/
+
+/*CONTACTO*/
+.contacto {
+    width:100%;
+    height:calc(100vh - 250px);
+}
+.contacto form{
+    padding:15px;
+    margin:auto;
+    width:80vw;
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    font-family:Arial;
+    font-size:medium;
+    
+}
+
+.contacto form div {
+        margin: auto;
+        width: 50%;
+        height:10em;  
+        padding:10px;
+}
+    .contacto form div input, .contacto form div textarea {
+        background-color: whitesmoke;
+        padding: 0 5px;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 3em;
+        border-style: none;
+        /*sha: 1px 1px gray;*/
+        -moz-box-shadow: .5px .5px 2px black;
+        -webkit-box-shadow: .5px .5px 2px black;
+        box-shadow: .5px .5px 2px black;
+    }
+    .contacto .boton {
+        background-color: #fc3468; /*Boton*/
+        color: white;
+        height: 50px;
+        line-height: 50px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .contacto form div textarea {
+        resize: none;
+        height: 100%;
+        padding: 5px;
+        font-family: Arial;
+        font-size: medium;
+    }
+/*TERMINA CONTACTO*/
+
+/*SUCURSAL*/
+.sucursales {
+    width:90vw;
+    height:100%;
+    margin:auto;
+    padding:20px 0;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+.sucursales .sucursal{
+    width:calc(45vw - 20px);
+    height:250px;
+    margin:10px 10px;   
+    display:flex;
+    border:1px solid lightgray;  
+}
+
+.sucursales .sucursal img{
+    width:50%; 
+    height:100%;
+}
+.sucursales .sucursal div{
+    width:100%;
+    height:250px;
+    display:flex;
+    flex-direction:column;
+}
+.sucursales .sucursal div div{
+    height:200px;
+    padding:5px;
+}
+.sucursales .sucursal div h3{
+    margin:5px;
+}
+
+.sucursales .sucursal div p{
+    margin:0;
+    font-size:medium;
+    padding-left:5px;
+}
+    .sucursales .sucursal div div p i{
+        margin-right: 5px;
+    color:gray;
+    }
+    .sucursales .sucursal div div p b {
+        /*color: #FC3C80;*/
+        color: #FC6F8A;
+    }
+    .sucursales .sucursal div a {
+        text-decoration: none;
+        background-color: #fc3468; /*Boton*/
+        display: block;
+        width: 100%;
+        height: 48px;
+        line-height: 50px;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+    }
+        .sucursales .sucursal div a:hover {
+            background-color: #FC6F8A; /*select*/
+            color: white;
+        }
+
+        /*TERMINA SUCURSALES*/
+
+ /*PRODUCTOS*/
+        .submenu {
+    width: 90vw;
+    height: 50px;
+    margin:20px 0;
+}
+    .submenu ul {
+        list-style: none;
+        width: 90vw;
+        height: 50px;
+        margin: 0; 
+        padding:0;
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+        .submenu ul li a {
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            display: block;
+            height: 50px;
+            padding: 0 10px;
+            margin: 0;
+            color: #ff3377; /*principal*/
+            border-bottom: 1px solid gray;
+        }
+
+
+            .submenu ul li a:hover {
+                background-color: #FC6F8A; /*select*/
+                color: white;
+            }
+
+.seccionpasteles {
+    width: 90vw;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+    .seccionpasteles > a {
+        text-decoration: none;
+        display: block;
+        width: 21.5vw;
+        height: 50vh;
+        margin: 10px .5vw 10px .5vw;
+        text-align: center;
+        color:black;
+        font-size: larger;
+        border: 1px solid lightgray;
+    }
+        .seccionpasteles > a:hover {
+            background-color: whitesmoke;
+            border: 1px solid lightgray;
+            /*color: black;*/
+        }
+
+    .seccionpasteles a img {
+        margin: 5px;
+        width: 95%;
+        height: 85%;
+    }
+/*TERMINA PRODUCTOS*/
+
+
+/*UN PRODUCTO*/
+.informacionPastel, .Especificacion{
+    width: 90vw;
+    height: 75vh;
+    margin: auto;
+    display: flex;
+}
+.informacionPastel img{
+    padding:15px 45px;
+    width:50%;
+    height:100%;
+}
+.informacionPastel>div{
+    width:50%;
+    height:100%;
+}
+.informacionPastel div div{
+   width:100%;
+   height:85%;
+   padding:15px;
+}
+    .informacionPastel div div h1 {
+        margin: 0;
+        font-weight: 100;
+    }
+    .informacionPastel div div h2 {
+        /*color: #ff93ac;*/
+        color: #FC6F8A;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .informacionPastel div div p {
+        margin: 0;
+        text-align:justify;
+        color:gray;
+    }
+    .informacionPastel div div div{
+        margin:10px 0;
+        width:100%;
+        height:50px;
+        border-bottom:1px solid gray;
+        text-align:center;
+    }
+    .informacionPastel div div .tamaño {
+        margin:0;
+        width: 100%;
+        height: 100px;       
+        border:none;
+    }
+.tamaño ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content:center;
+}
+     .tamaño ul li {
+         height:30px;
+         width:11vw;
+         border:1px solid gray;
+         line-height:30px;
+         margin:5px;
+         color:gray;
+         font-weight:600;
+  
+     }
+        .tamaño ul li:hover {
+            color: white;
+            /*background-color: #ff93ac;*/
+            background-color:#FC6F8A;
+        }
+
+.informacionPastel div div div label {
+    font-size: large;
+    font-weight: 100;
+    /*color: #ff93ac;*/ 
+    color: #FC6F8A;
+}
+.informacionPastel div input {
+    width: calc(100% - 30px);
+    height: 10%;
+    background-color: #ff3377; /*principal*/
+    color: white;
+    font-size: larger;
+    margin: 0 15px;
+}
+.Especificacion {
+    height: 50vh;
+    margin-bottom: 20px;
+    border-top: 1px solid gray;
+}
+    .Especificacion div{      
+        width:30vw;
+        padding:15px;
+        border-right:1px solid gray;
+       
+    }
+    .Especificacion div:last-child{
+        border:none;
+    }
+    .Especificacion h3 {
+        margin: 0;
+        text-align: center;
+        /*color: #ff93ac;*/
+        color: #FC6F8A;
+        font-weight: 300;
+    }
+    .Especificacion ul{
+        padding:0;
+        list-style:none;
+        color:gray;       
+    }
+    .Especificacion ul li{
+        padding:5px;
+    }
+    .Especificacion ul li i{
+        padding-right:5px;
+        width:20px;
+    }
+    .Especificacion div img{
+        width:100%;
+        height:100%;
+        padding:15px;
+    }
+ /*TERMINA PRODUCTO*/
+
+ /*CARRITO*/
+.carrito {
+    width: 90vw;
+    height: calc(100vh - 250px);
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+.carrito .producto{
+    width:100%;
+    height:30vh;
+    display:flex;
+    border-bottom:1px solid lightgray;
+}
+    .carrito .producto h2 {
+        margin: 0;
+        padding: 0;
+        font-weight: 300;
+    
+        color: #FC6F8A;
+    }
+.carrito .producto img{
+    height:100%;
+    width:180px;
+    padding:10px;
+}
+    .carrito .producto div {
+        padding: 10px;
+        display:flex;
+       
+    }
+    .carrito .producto div div{
+        flex-direction:column;
+    }
+        .carrito .producto div .cantidad {
+            align-items: center;
+            display:flex;
+            flex-direction:row-reverse;
+      
+        }
+
+            .carrito .producto div div select {
+                width: 50px;
+                height: 40px;
+                margin:10px;
+                font-size: large;                
+            }
+            .carrito .producto div div h2 {
+                font-size: x-large;
+                padding:0 10px;
+              
+            }
+        .carrito .producto div div p {
+            padding: 0 10px;
+            text-align:justify;
+        }
+        .carrito .producto div div a {
+           
+            color: #FC6F8A;
+            padding: 0 10px;
+        }
+            .carrito .total {
+                width: 100%;
+                height: 30vh;
+                justify-self:right;
+                display: flex;
+                flex-direction:row-reverse;     
+            }
+            .carrito .total div{
+                width:50%;                
+            }
+            .carrito .total table{
+                height:80%;
+                width:100%;
+                text-align:right;
+                font-size:large;
+                border-collapse:collapse;
+                border-style:none;
+                border:none;
+            }
+            .carrito .total table tr{
+                border-bottom: 1px solid lightgray; 
+            }
+            .carrito .total table tr:last-child{
+                border:none;
+            }
+                .carrito .total table tr td {
+                    color: gray;
+                    font-size: large;
+                    padding: 10px;
+                }
+                #precioTotal{
+                    
+                    color: #FC6F8A;
+                    text-transform:uppercase;
+                    font-weight:500;
+                }
+
+                .carrito .total button {
+                    width: 100%;
+                    height: 20%;
+                    background-color: #fc3468; /*Boton*/
+                    color: white;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+
+@media screen and (max-width:900px) {
+
+    .inicio div #logo {
+        width: 35vw;
+        height: 40vh;
+        position: absolute;
+        top: 30px;
+        left: 10vw;
+    }
+
+    .inicio div h1 {
+        top: 45vh;
+    }
+
+    .inicio .titulo {
+        letter-spacing: 3px;
+       
+        font-size: 35px;
+    }
+
+    .inicio div a {
+        top: 65vh;
+        left: 10vw;
+    }
+            .menu-normal {
+        display: none;
+    }
+
+    .menu-chico {
+        display: contents;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        height: 100px;
+    }
+
+    .menu .menu-chico label, .menu .menu-chico > a {
+        display: block;
+        width: 50px;
+        height: 100px;
+        color: white;
+        font-size: x-large;
+        text-align: center;
+        line-height: 100px;
+        float: right;
+        
+    }
+
+    #checkmenu {
+        display: none;
+    }
+
+    .menu .menu-chico .panel {
+        z-index:1;
+        background-color: lightpink;
+        position: fixed;
+        height: 100%;
+        top: 100px;
+        width: 200px;
+        left: -200px;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        opacity: .95;
+    }
+
+        .menu .menu-chico .panel ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            .menu .menu-chico .panel ul li > a {
+                margin: 0;
+                padding: 15px;
+                color: white;
+                display: block;
+                text-align: left;
+                font-size: large;
+                text-decoration: none;
+                text-shadow: 1px 1px gray;
+             }
+
+    .menu-chico .panel ul a i {
+        padding-right: 5px;
+    }
+
+    #checkmenu:checked + .panel {
+        left: 0px;
+    }
+
+    .menu-chico a:hover, .menu-chico label:hover, .menu-chico .panel ul li a:hover {        
+        background-color: #FC6F8A;
+    }
+    .seccionpasteles > a {
+        font-size:small;
+    }
+
+    
+}
+
+@media screen and (max-width:800px) {
+    .inicio {
+        height: 50vh;
+        background-size: 100% 60vh;
+    }
+
+        .inicio .titulo {
+            letter-spacing: 1px;
+            font-size: 35px;
+            padding: 10px 20px;
+            
+        }
+
+        .inicio div #logo {
+            width: 30vw;
+            height: 25vh;           
+            top: 20px;
+        }
+
+        .inicio div h1 {
+            top: 30vh;
+        }
+
+        .inicio .titulo {
+            font-size: 25px;
+        }
+         .inicio div a {            
+            height: 40px;
+            width: 40vw;
+            line-height: 40px;
+            top: 40vh;
+            left: 10vw;
+        }
+    .nosotros .nos-imagenes img {
+        height: 50vh;
+    }
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+    .contacto {
+        height: 100%;
+    }
+    .contacto form {
+            margin: auto;
+            width: 90vw;
+            height: auto;
+            padding: 0;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+    .contacto form div {
+                margin: auto;
+                width: 60vw;
+            }
+    .sucursales {
+        width: 90vw;
+        height: 100%;
+        margin: auto;
+             
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+        .sucursales .sucursal {
+            width: calc(100% - 20px);
+           
+
+        }            
+    .seccionpasteles > a {
+       
+        width: 29vw;
+        font-size:medium;
+        
+    }
+    .informacionPastel div div h2 {
+        margin: 0;
+       
+    }
+    .Especificacion div img {
+       
+        height: 75%;
+    }
+    .informacionPastel img {
+        padding: 15px 15px;
+        
+    }
+    .carrito .producto div div h2 {
+        font-size: large;
+        padding: 0;
+    }
+
+    .carrito .producto div div p {
+        padding: 0;
+        
+    }
+
+    .carrito .producto div div a {
+
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .inicio {
+        height: 50vh;
+    }
+    #logo-menu {
+        display: contents;
+    }
+        .inicio div #logo {
+          display:none;
+        }
+
+        .inicio div h1 {
+            top: 5vh;
+        }
+
+        .inicio .titulo {
+            letter-spacing: 3px;
+            font-size: 35px;         
+            letter-spacing: 1px;            
+            padding: 10px 10px;
+        }
+        .inicio div a {
+            height: 40px;
+            width: 35vw;
+            line-height: 40px;           
+            top: 30vh;
+            left: 50px;
+        }
+
+
+    .descripcion1 {
+        flex-direction: column;
+    }
+        .descripcion1 .contigo, .descripcion1 .tradicion {
+           flex-direction:column;
+        }
+        .descripcion1 > .contigo .frase, .descripcion1 > .tradicion .frase {
+            width: 90vw;
+            padding: 10px;
+            justify-self: center;
+        }
+
+        .descripcion1 div img, .descripcion1 div video {
+            width: 90vw;
+        }
+
+
+    .nosotros .nos-descripcion2, .nosotros .nos-imagenes {
+        flex-direction: column;
+    }
+
+        .nosotros .nos-descripcion2 .mvv {
+            margin: 0 0 10px 0;
+            width: 90vw;
+        }
+
+        .nosotros .nos-imagenes img {
+            width: 90vw;
+            height: 90vh;
+        }
+
+    .contacto {
+        height: 100%;
+    }
+
+        .contacto form {
+            margin: auto;
+            width: 90vw;
+            height: auto;
+            padding: 0;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+            .contacto form div {
+                margin: auto;
+                width: 70vw;
+            }
+
+    .seccionpasteles > a {
+        width: 89vw;
+        height: 80vh;
+        line-height:30px;
+        font-size: larger;
+    }
+
+    .submenu {
+        height: 150px;
+        margin: 0;
+    }
+
+        .submenu ul {
+            list-style: none;
+            height: 150px;
+            flex-direction: column;
+        }
+
+            .submenu ul li a {
+                line-height: 30px;
+                height: 30px;
+            }
+
+    .informacionPastel, .Especificacion {
+        height: 100%;
+        flex-direction: column;
+        border-top:none;
+    }
+
+        .informacionPastel > div, .informacionPastel img {
+            width: 100%;
+        }
+
+        .Especificacion div {
+            width: 100%;
+            padding: 15px;
+            border-right: none;
+            border-bottom:1px solid lightgray;
+        }
+        .informacionPastel div input {
+          
+            height:50px;
+            
+        }
+    .tamaño ul li {
+        width: 30vw;
+      
+    }
+    .carrito .producto {
+        padding:0;
+        padding:10px;
+    }
+
+   .carrito .producto div {
+            padding: 10px;
+            display: flex;
+            flex-direction:column;
+            align-items:center;
+   }
+    .carrito .producto div div {
+        padding:0;
+    }
+    .carrito .producto img {
+            height: 100%;
+            width: 150px;
+      }
+        .carrito .producto div div select {
+            width: 40px;
+            height: 30px;
+            margin: 10px;
+            font-size: large;
+        }
+
+    .carrito .producto div div h2 {
+        font-size:medium;
+        padding: 0;
+    }
+
+    .carrito .producto div div p {
+        padding: 0;
+        margin:0;
+        font-size:small;
+    }
+
+     .carrito .producto div div a {
+            padding: 0;
+            font-size:small;
+     }
+
+}
+

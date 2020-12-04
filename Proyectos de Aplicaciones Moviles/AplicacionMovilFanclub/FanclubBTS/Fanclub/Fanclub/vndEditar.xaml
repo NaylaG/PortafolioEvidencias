@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fanclub.vndEditar" BackgroundColor="#3052A3">
+    <ContentPage.ToolbarItems>
+        
+        <ToolbarItem Text="Editar" x:Name="toolbEditar" Clicked="ToolbEditar_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="Medium"></Setter>
+            <Setter Property="TextColor" Value="White"></Setter>
+            <Setter Property="Margin" Value="8,0,0,0"></Setter>
+        </Style>
+        <Style TargetType="Entry">
+            <Setter Property="TextColor" Value="#E6C2C2"></Setter>
+            <Setter Property="Margin" Value="8,0,0,0"></Setter>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <StackLayout Margin="10">
+            <Image Source="login.png" HorizontalOptions="Center" HeightRequest="70" Margin="10"></Image>
+            <Label Text="Usuario" FontSize="25" HorizontalOptions="CenterAndExpand" TextColor="White" Margin="5" ></Label>
+            <Entry Text="{Binding Usuario}" IsEnabled="False"  FontSize="25" HorizontalOptions="CenterAndExpand" Margin="5">
+            </Entry>
+            <Label Text="Nombre"></Label>
+            <Entry Text="{Binding Nombre}"  IsEnabled="False"></Entry>
+            <Label Text="Apellidos"></Label>
+            <Entry Text="{Binding Apellidos}"  IsEnabled="False"></Entry>
+            <Label Text="Pais"></Label>
+            <Entry Text="{Binding Pais}"  ></Entry>
+            <Label Text="Correo electrónico"></Label>
+            <Entry Text="{Binding Correo}" ></Entry>
+        </StackLayout>
+           
+        
+    </ScrollView>
+</ContentPage>

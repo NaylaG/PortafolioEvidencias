@@ -1,0 +1,81 @@
+﻿<Window x:Class="ProyectoPersonas.Views.ListaPersonasView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoPersonas.Views"
+        mc:Ignorable="d"
+        Title="ListaPersonasView" Height="500" Width="750">
+    <Window.Resources>
+
+        <Style x:Key="DataGridStyle1" TargetType="{x:Type DataGrid}">
+            <Setter Property="ColumnHeaderStyle" Value="{DynamicResource ColumnHeaderStyle1}"/>
+        </Style>
+
+        <Style x:Key="ColumnHeaderStyle1" TargetType="DataGridColumnHeader">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Background" Value="#FFF0AE21"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="FontWeight" Value="SemiBold"></Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="ToolTip" Value="Click to sort."/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top" Height="100" Background="#FF01011F">
+
+            <Button BorderThickness="0" x:Name="btnImprimir" Background="Transparent" Padding="30" DockPanel.Dock="Right" Click="BtnImprimir_Click">
+                <Image Source="/Images/imprimir.png" ></Image>
+            </Button>
+
+            <Button x:Name="BtnEliminar"   
+                Command="{Binding Eliminar}" 
+                CommandParameter="{Binding ElementName=DtgPersonas,Path=SelectedItem}"
+                Padding="30" BorderThickness="0" 
+                Background="Transparent" 
+                DockPanel.Dock="Right" Margin="0,1,0,-1">
+                <Image Source="/Images/remove-user.png"></Image>
+            </Button>
+            <Button  Padding="30" Name="btnEditar" Background="Transparent" BorderThickness="0"
+                 DockPanel.Dock="Right" Click="BtnEditar_Click">
+                <Image Source="/Images/edit_white.png"></Image>
+            </Button>
+
+            <Button x:Name="BtnAgregar" Padding="30" BorderThickness="0"
+                Background="Transparent" DockPanel.Dock="Right"
+               Click="BtnAgregar_Click" 
+                >
+                <Image Source="/Images/new-user.png"></Image>
+            </Button>
+            <Image Source="/images/logoahmsa.png" Margin="8">
+                
+            </Image>
+            <StackPanel DockPanel.Dock="Left">
+                <!--<TextBlock FontSize="30" Foreground="White" Margin="0,20,0,0" HorizontalAlignment="Center">Lista de Personas</TextBlock>-->
+                <TextBlock  Foreground="White" HorizontalAlignment="Center" FontFamily="Calibri" FontWeight="Black" FontSize="22" Margin="0,25,0,0">Lista de Empleados </TextBlock>
+                <TextBlock  Foreground="White" HorizontalAlignment="Center" FontWeight="DemiBold">ENERO-DICIEMBRE 2019</TextBlock>
+            </StackPanel>
+        </DockPanel>
+        <Border   DockPanel.Dock="Bottom" Height="50" Background="#FF01011F">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Image Margin="10" HorizontalAlignment="Right"  Source="/Images/standing-up-man-.png" ></Image>
+                <TextBlock Padding="10" Foreground="White" VerticalAlignment="Center" FontSize="20" Text="{Binding Hombres}"></TextBlock>
+                <Image Margin="10" Source="/Images/girl.png"></Image>
+                <TextBlock Padding="10" Foreground="White" VerticalAlignment="Center" FontSize="20" Text="{Binding Mujeres}"></TextBlock>
+            </StackPanel>
+        </Border>
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" Style="{DynamicResource DataGridStyle1}" x:Name="DtgPersonas" ItemsSource="{Binding Personas}" AlternatingRowBackground="#FFF0F0C8">
+            <DataGrid.Columns>
+                <DataGridTextColumn  Width="0.6*" Header="Nombre" Binding="{Binding Nombre}" ></DataGridTextColumn>
+                <DataGridTextColumn  Header="Edad" Width="0.2*" Binding="{Binding Edad}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Género" Width="0.2*" Binding="{Binding Genero}" ></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>

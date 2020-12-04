@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fanclub.vndFanCafe" BackgroundColor="#3052A3" Title="BTS FANCAFE 2019">
+
+    
+    <ContentPage.ToolbarItems>
+        <!--<ToolbarItem Text="SUSCRIBIR"   ></ToolbarItem>-->
+        <ToolbarItem  Text="SUSCRIBIR" IconImageSource="btnadd.png" x:Name="toolAgregar" Clicked="ToolAgregar_Clicked"></ToolbarItem>
+        
+    </ContentPage.ToolbarItems>
+    
+    <ScrollView Grid.Row="2">
+            <StackLayout Spacing="5">
+            <!--<Label Text="BTS FANCAFE 2019" FontSize="30" HorizontalOptions="CenterAndExpand" TextColor="White" Margin="7" FontAttributes="Bold"></Label>-->
+            <ListView  x:Name="lstArmys" HasUnevenRows="True" Margin="10" BackgroundColor="#E6C2C2">
+                    <ListView.ItemTemplate >
+                        <DataTemplate>
+                            <ViewCell >
+                                <ViewCell.ContextActions>
+                                <MenuItem BindingContext="{Binding .}" x:Name="btnEliminar" Text="Eliminar" Clicked="BtnEliminar_Clicked" ></MenuItem>
+                                <MenuItem BindingContext="{Binding .}" x:Name="btnVer" Text="Ver"  Clicked="BtnVer_Clicked"></MenuItem>
+                                <MenuItem BindingContext="{Binding .}" x:Name="btnEditar" Text="Editar" Clicked="BtnEditar_Clicked"></MenuItem>
+                                    
+                                </ViewCell.ContextActions>
+                            <Frame Padding="3"  Margin="5">
+                                
+                                    <StackLayout Orientation="Horizontal" Spacing="5" >
+                                        <Image  Source="pr2.png" HeightRequest="55"  VerticalOptions="CenterAndExpand" ></Image>
+                                    <StackLayout VerticalOptions="Center" Margin="5">
+                                        <Label Text="{Binding Usuario}" HorizontalOptions="FillAndExpand" FontSize="Large"
+                                           LineBreakMode="WordWrap" VerticalTextAlignment="Center" HorizontalTextAlignment="Start">
+                                        </Label>
+                                        <Label Text="{Binding Pais}"></Label>
+                                    </StackLayout>
+                                    </StackLayout>
+                                   
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    
+</ContentPage>

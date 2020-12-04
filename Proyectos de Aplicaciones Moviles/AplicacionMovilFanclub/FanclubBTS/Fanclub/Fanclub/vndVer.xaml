@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fanclub.vndVer" BackgroundColor="#3052A3">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="Large"></Setter>
+            <Setter Property="TextColor" Value="White"></Setter>
+            <Setter Property="Margin" Value="15,0,0,0"></Setter>
+        
+        </Style>
+       
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+
+        <StackLayout Margin="17" Spacing="5" BackgroundColor="#E6C2C2">
+            <Image Source="login.png" HorizontalOptions="Center" HeightRequest="70" Margin="5,20,5,5">
+            </Image>
+            <Label Text="Usuario" FontSize="Large" HorizontalOptions="CenterAndExpand" TextColor="White" Margin="5" ></Label>
+            <Label Text="{Binding Usuario}" TextColor="#2A0D21" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="5"></Label>
+            <Label Text="Nombre"></Label>
+            <Label Text="{Binding Nombre}" TextColor="#2A0D21" FontSize="Medium"></Label>
+            <Label Text="Apellidos"></Label>
+            <Label Text="{Binding Apellidos}" TextColor="#2A0D21" FontSize="Medium"></Label>
+            <Label Text="Pais"></Label>
+            <Label Text="{Binding Pais}" TextColor="#2A0D21" FontSize="Medium" ></Label>
+            <Label Text="Correo electrónico"></Label>
+            <Label Text="{Binding Correo}" TextColor="#2A0D21" FontSize="Medium"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
