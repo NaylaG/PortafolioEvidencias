@@ -1,0 +1,33 @@
+﻿@model ProyectoRazasPerrosU3.Models.ViewModels.RazaViewModel
+@{
+    Layout = "_Layout";
+}
+
+<section class="nav">
+    <h3>Razas por país</h3>
+    <nav>
+        <a href="/">Listado Alfabético de Razas</a>
+    </nav>
+</section>
+
+<section class="list">
+    @foreach (var item in Model.Paises.OrderBy(x=>x.Nombre))
+    {
+        <h4>@(item.Razas==null? " " : item.Nombre)</h4>
+        <ul>
+            @foreach (var r in item.Razas.Where(x => x.Eliminado == 0))
+            {
+                <li>
+                    <a href="/Raza/@r.Nombre.Replace(" ","-")">
+                        <img src="/imgs_perros/@(r.Id)_0.jpg" />
+                        @r.Nombre
+                    </a>
+                </li>
+            }
+
+        </ul>
+    }
+
+
+
+</section>
