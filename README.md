@@ -1,2 +1,2 @@
 # PortafolioEvidencias
- Este repositorio es una recopilación de varios de mis proyectos que he realizado a lo largo de mi carrera.
+ Este repositorio es una recopilación de algunos de los proyectos en los que he trabajado a lo largo de mi carrera.
